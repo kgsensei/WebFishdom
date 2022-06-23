@@ -1,0 +1,152 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-image: url("../resources/bg.jpg");
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	user-select: none;
+}
+
+#youDied {
+	z-index: 999999;
+	background-color: black;
+	color: crimson;
+	display: none;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	font-size: 5vh;
+}
+
+#gameContainer {
+	position: absolute;
+	left: 25%;
+	height: 70%;
+	width: 65%;
+	top: 15%;
+	overflow: hidden;
+}
+
+#player {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+	width: 5%;
+	height: auto;
+}
+
+.fishHealth {
+	position: absolute;
+	color: rgb(60, 220, 120);
+	left: 100%;
+	top: -25%;
+	font-weight: 800;
+	font-size: 2.25vh;
+}
+
+.enemyFishHealth {
+	position: absolute;
+	color: rgb(220, 60, 60);
+	left: 90%;
+	top: 10%;
+	font-weight: 800;
+	font-size: 2.25vh;
+}
+
+.fishImg {
+	height: 100%;
+	width: 100%;
+}
+
+.fish {
+	position: relative;
+	width: 100%;
+	height: 20%;
+}
+
+.enemyContainer {
+	display: inline-block;
+	margin-right: 7.5%;
+	width: 10%;
+	height: 100%;
+}
+
+.centerText {
+    cursor: inherit;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0%,-50%);
+}
+
+#antiReach {
+	position: absolute;
+	left: 15%;
+	width: 85%;
+	height: 100%;
+	top: 0%;
+	z-index: 999;
+}
+
+#playerFishAnimContainer{
+	animation: fishFloatNoRotate 2s ease-in-out 0ms infinite;
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes fishFloatNoRotate {
+	0% {
+		transform: translate(0%, 3%);
+	}
+	50% {
+		transform: translate(0%, -3%);
+	}
+	100% {
+		transform: translate(0%, 3%);
+	}
+}
+
+@keyframes fishFloat {
+	0% {
+		transform: translate(0%, 2%) rotate(-1deg);
+	}
+	50% {
+		transform: translate(0%, -2%) rotate(1deg);
+	}
+	100% {
+		transform: translate(0%, 2%) rotate(-1deg);
+	}
+}
+
+
+#introScreen{
+	background-color: black;
+	position: fixed;
+	z-index: 999999;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+}
+
+#is_centerV{
+	position: absolute;
+	height: 20%;
+	top: 35%;
+	left: 0%;
+	width: 100%;
+}
+
+#is_centerH{
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	height: 100%;
+	transform: translate(-50%,0%);
+}
